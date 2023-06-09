@@ -13,6 +13,7 @@ username: ${{ github.actor }}
 password: ${{ secrets.GITHUB_TOKEN }}
 - name: idk test buildof a docker image
 run: |
+       cd pocketmine
        docker build . --tag ghcr.io/madasxyz/pocketmine:latest
        docker run ghcr.io/madasxyz/pocketmine:latest
        docker push ghcr.io/madasxyz/pocketmine:latest
